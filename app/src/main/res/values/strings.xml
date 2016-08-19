@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Google Play Services</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- <string name="google_app_id" translatable="false">944132771892</string>
+    <string name="android_key" translatable="false">AIzaSyDGLWQN2p0EVyHnyinBcQe3Qjh7x3F6cak</string> -->
+
+    <string name="activity_recognition">To Activity Recognition</string>
+
+    <string name="request_activity_updates">Request Activity Updates</string>
+    <string name="remove_activity_updates">Remove Activity Updates</string>
+
+    <!-- Activity Types -->
+    <string name="in_vehicle">In Vehicle</string>
+    <string name="on_bicycle">On Bicycle</string>
+    <string name="on_foot">On Foot</string>
+    <string name="running">Running</string>
+    <string name="still">Still</string>
+    <string name="tilting">Tilting</string>
+    <string name="unknown">Unknown</string>
+    <string name="walking">Walking</string>
+    <string name="unidentifiable_activity">Unidentifiable Activity</string>
+
+    <!-- Geofence Error Messages -->
+    <string name="geofence_not_available">Goefence service is not available now.</string>
+    <string name="geofence_registered_too_many">Your app has registered too many Geofences.</string>
+    <string name="geofence_provided_too_many_pending_intent">You have provided too many PendingIntents to teh addGeo.</string>
+    <string name="geofence_unknown_error">Geofence unknown errors.</string>
+
+    <!-- Geofence Transitions -->
+    <string name="geofence_transition_enter">Entered into geofence(s)</string>
+    <string name="geofence_transition_exit">Exited from geofence(s)</string>
+    <string name="geofence_transition_unknown">Unknown geofence transition</string>
+
+    <string name="add_geofences">Add Geofences</string>
+    <string name="to_geofence">To Geofence</string>
+
+    <string name="geofence_my_home">Home Sweet Home</string>
+    <string name="geofence_my_gym">Zarni Fitness Center</string>
+    <string name="start_place_picker">Start Place Picker</string>
+    <string name="get_current_place_name">Get Current Place Name</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- Left Menu -->
+    <string name="gps_user_current_location">User Current Location</string>
+    <string name="gps_activity_recognition">Activity Recognition</string>
+    <string name="gps_geofences">Geofences</string>
+    <string name="gps_map_activity">Map Activity</string>
+</resources>

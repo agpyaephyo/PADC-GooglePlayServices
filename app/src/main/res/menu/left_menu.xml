@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/gps_user_current_location"
+            android:icon="@drawable/ic_my_location_24dp"
+            android:title="@string/gps_user_current_location"
+            android:checked="true"
+            />
+
+        <item
+            android:id="@+id/gps_activity_recognition"
+            android:icon="@drawable/ic_activity_24dp"
+            android:title="@string/gps_activity_recognition"/>
+
+        <item
+            android:id="@+id/gps_geofences"
+            android:icon="@drawable/ic_geofences_24dp"
+            android:title="@string/gps_geofences"
+            />
+
+        <item
+            android:id="@+id/gps_map_activity"
+            android:icon="@drawable/ic_map_24dp"
+            android:title="@string/gps_map_activity"
+            />
+
+    </group>
+</menu>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "944132771892",
+    "firebase_url": "https://winter-alliance-124115.firebaseio.com",
+    "project_id": "winter-alliance-124115",
+    "storage_bucket": "winter-alliance-124115.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944132771892:android:fb60a433aa2f2aef",
+        "android_client_info": {
+          "package_name": "xyz.aungpyaephyo.gps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944132771892-n5nd1cncvl9m8cnt96shusdtsognqnqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "xyz.aungpyaephyo.gps",
+            "certificate_hash": "08F3173B7FF8E85D3971085387ED01CE2E634A6B"
+          }
+        },
+        {
+          "client_id": "944132771892-bt5hde1to6af661r7kqg6jdmijq0i965.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM3bN8ko_J21mSea9-0JZ8FUauymfaqrA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944132771892-bt5hde1to6af661r7kqg6jdmijq0i965.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import xyz.aungpyaephyo.gps.R;
+import xyz.aungpyaephyo.gps.utils.FAUtils;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -75,6 +76,8 @@ public class LocationFragment extends Fragment {
 
     @OnClick(R.id.btn_get_current_place_name)
     public void onTapGetCurrentPlaceName(View view) {
+        FAUtils.getInstance().logAppEvent(FAUtils.ACTION_TAP_GET_CURRENT_PLACE_NAME);
+
         mLocationController.onTapGetCurrentPlaceName();
     }
 

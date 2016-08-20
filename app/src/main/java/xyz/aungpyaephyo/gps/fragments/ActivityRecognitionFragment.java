@@ -36,7 +36,6 @@ public class ActivityRecognitionFragment extends Fragment {
     Button btnRemoveActivityUpdate;
 
     private ControllerActivityRecognition controllerActivityRecognition;
-    private ControllerActivityRecognitionScreen controllerActivityRecognitionScreen;
 
     public static final String TAG = ActivityRecognitionFragment.class.getSimpleName();
 
@@ -48,7 +47,6 @@ public class ActivityRecognitionFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         controllerActivityRecognition = (ControllerActivityRecognition) context;
-        controllerActivityRecognitionScreen = (ControllerActivityRecognitionScreen) context;
     }
 
     @Override
@@ -88,9 +86,5 @@ public class ActivityRecognitionFragment extends Fragment {
         }
 
         tvActivity.setText(activityTextBuilder.toString());
-    }
-
-    public interface ControllerActivityRecognitionScreen {
-
     }
 }

@@ -29,7 +29,6 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.PlaceLikelihood;
 import com.google.android.gms.location.places.PlaceLikelihoodBuffer;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.ui.PlacePicker;
@@ -389,9 +388,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
         @Override
         public void onResult(@NonNull Status status) {
             if (status.isSuccess()) {
-                Log.d(GPSApplication.LOG_TAG, "Successfully added / removed activity detection");
+                Toast.makeText(GPSApplication.getContext(), "Successfully added / removed activity detection", Toast.LENGTH_SHORT).show();
             } else {
-                Log.d(GPSApplication.LOG_TAG, "Error adding / removing activity detection");
+                Toast.makeText(GPSApplication.getContext(), "Error adding / removing activity detection", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -405,6 +404,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
             } else {
                 String errorMsg = GeofenceUtils.getErrorString(status.getStatusCode());
                 Log.d(GPSApplication.LOG_TAG, errorMsg);
+                Toast.makeText(GPSApplication.getContext(), GPSApplication.LOG_TAG + " - " + errorMsg, Toast.LENGTH_SHORT).show();
             }
         }
     }

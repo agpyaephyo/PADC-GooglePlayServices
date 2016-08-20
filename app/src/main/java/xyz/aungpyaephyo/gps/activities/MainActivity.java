@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.google.android.gms.location.DetectedActivity;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.PlaceLikelihoodBuffer;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,6 @@ import xyz.aungpyaephyo.gps.fragments.LocationFragment;
 
 public class MainActivity extends BaseActivity implements
         LocationFragment.ControllerLocationScreen,
-        ActivityRecognitionFragment.ControllerActivityRecognitionScreen,
         GeofenceFragment.ControllerGeofenceScreen,
         NavigationView.OnNavigationItemSelectedListener {
 

@@ -6,3 +6,5 @@ All the google play services being taught in PADC will be put here.
 - Geofences
 - Place Picker
 - Google Map API
+- Google Analytics
+- Firebase Analytics

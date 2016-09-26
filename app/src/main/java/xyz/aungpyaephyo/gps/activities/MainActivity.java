@@ -107,7 +107,8 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onLocationRetrieved(Location location) {
         super.onLocationRetrieved(location);
-        LocationFragment locationFragment = (LocationFragment) getSupportFragmentManager().findFragmentByTag(LocationFragment.TAG);
+        LocationFragment locationFragment = (LocationFragment) getSupportFragmentManager()
+                .findFragmentByTag(LocationFragment.TAG);
         if (locationFragment != null) {
             locationFragment.setLocation(location);
         } else {

@@ -38,6 +38,7 @@ public class GeofenceTransitionsIntentService extends IntentService {
 
         int geofenceTransitionType = geofencingEvent.getGeofenceTransition();
         List<Geofence> triggeringGeofences = geofencingEvent.getTriggeringGeofences();
+
         String geofenceDetails = GeofenceUtils.getGeofenceTransitionDetails(triggeringGeofences);
         String geofenceEvent = GeofenceUtils.getGeofenceTransition(geofenceTransitionType) + " - " + geofenceDetails;
 

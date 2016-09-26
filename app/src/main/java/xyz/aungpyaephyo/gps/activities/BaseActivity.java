@@ -58,6 +58,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
 
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
+
     private ActivityDetectionBroadcastReceiver mActivityDetectionBR;
 
     private ActivityRecognitionResultCallback mActivityRecognitionResultCallback;
@@ -188,9 +189,11 @@ public abstract class BaseActivity extends AppCompatActivity implements
         if (!mGoogleApiClient.isConnected()) {
             Toast.makeText(this, "Google Api Client is not connected", Toast.LENGTH_SHORT).show();
         } else {
-            ActivityRecognition.ActivityRecognitionApi.requestActivityUpdates(
+            PendingResult<Status> result = ActivityRecognition.ActivityRecognitionApi.requestActivityUpdates(
                     mGoogleApiClient, GPSConstants.ACTIVITY_DETECTION_INTERVAL,
-                    UserActivityUtils.getActivityDetectionPendingIntent()).setResultCallback(mActivityRecognitionResultCallback);
+                    UserActivityUtils.getActivityDetectionPendingIntent());
+
+            result.setResultCallback(mActivityRecognitionResultCallback);
         }
     }
 
@@ -264,7 +267,8 @@ public abstract class BaseActivity extends AppCompatActivity implements
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         mLocationRequest.setInterval(GPSConstants.LOCATION_DETECTION_INTERVAL);
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding

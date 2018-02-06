@@ -42,7 +42,8 @@ public class GeofenceTransitionsIntentService extends IntentService {
         String geofenceDetails = GeofenceUtils.getGeofenceTransitionDetails(triggeringGeofences);
         String geofenceEvent = GeofenceUtils.getGeofenceTransition(geofenceTransitionType) + " - " + geofenceDetails;
 
-        if (geofenceTransitionType == Geofence.GEOFENCE_TRANSITION_ENTER || geofenceTransitionType == Geofence.GEOFENCE_TRANSITION_EXIT) {
+        if (geofenceTransitionType == Geofence.GEOFENCE_TRANSITION_ENTER
+                || geofenceTransitionType == Geofence.GEOFENCE_TRANSITION_EXIT) {
             NotificationUtils.showNotification(geofenceEvent);
         } else {
             NotificationUtils.showNotification(geofenceEvent); //Need to see the error in development. TODO remove that in production.
